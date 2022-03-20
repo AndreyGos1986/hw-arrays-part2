@@ -115,14 +115,16 @@ public class Main {
 
         System.out.println();
         System.out.println("ЗАДАЧА №8");
-        int[] hardArr = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
-        for (int i = 0; i < hardArr.length / 4; i++) {
-            for (int j = 0; j < hardArr.length; j++) {
-                Arrays.sort(hardArr);
-                int x = hardArr[i];
-                int y = hardArr[j];
-                if (hardArr[i] + hardArr[j] == -2) {
-                    System.out.print(hardArr[j] + " " + hardArr[i] + " ");
+        int[] hardArr = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1,8,-10,12,55,-57,117,-119,-14};
+        Arrays.sort(hardArr);
+        boolean d;
+        if (d=true) {
+            for (int i = 0; i < hardArr.length / 4; i++) {
+                for (int j = 0; j < hardArr.length; j++) {
+                    if (hardArr[i] + hardArr[j] == -2 && d) {
+                        System.out.print(hardArr[j] + " " + hardArr[i] + " ");
+                        d=false;
+                    }
                 }
             }
         }
@@ -134,8 +136,6 @@ public class Main {
         for (int i = 0; i < hardArr2.length / 2; i++) {
             for (int j = 0; j < hardArr2.length; j++) {
                 Arrays.sort(hardArr2);
-                int x = hardArr2[i];
-                int y = hardArr2[j];
                 if (hardArr2[i] + hardArr2[j] == -2) {
                     System.out.print(hardArr2[j] + " " + hardArr2[i] + " ");
                     System.out.println();
