@@ -2,6 +2,7 @@ package ru.skypro;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
 
 public class Main {
 
@@ -46,13 +47,14 @@ public class Main {
         System.out.println();
         System.out.println("Задача 3 - Найти среднее значение");
         System.out.println();
+        double averageValue =  findAverageCosts(arrayExpenses);
 
-        double averageValue = 0;
 
-        for (int i = 0; i < arrayExpenses.length; i++) {
-            averageValue = (expensesSumPerMonth / arrayExpenses.length);
-
-        }
+//
+////        for (int i = 0; i < arrayExpenses.length; i++) {
+////            averageValue = (expensesSumPerMonth / arrayExpenses.length);
+////
+////        }
         System.out.println("Средняя сумма трат за месяц составила: " + averageValue + " рублей"); //
 
         System.out.println();
@@ -155,6 +157,21 @@ public class Main {
         }
         return arr;
 
+    }
+    //ЗАДАЧА ПО МЕТОДАМ №6 ИЗ УСЛОЖНЁННЫХ
+    public static double findAverageCosts (int[] costs) {
+        int sum = calcCostsSumm(costs);
+        return findAverageCost(costs, sum);
+    }
+    private static double findAverageCost(int[] costs, double sum) {
+        return sum / costs.length;
+    }
+    private static int calcCostsSumm(int[] arr) {
+        int sum=0;
+        for(int num: arr){
+            sum +=num;
+        }
+        return sum;
     }
 }
 
